@@ -22,7 +22,7 @@
             <i class="material-icons">menu</i>
           </a>
 
-          <a href="#" class="brand-logo center">220V Soluções elétricas</a>
+          <a href="index.php" class="brand-logo center">220V Soluções elétricas</a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="#"><i class="material-icons">notifications</i></a></li>
           </ul>
@@ -56,15 +56,15 @@
             </a>
           </li>
           <li class="no-padding">
-              <ul class="collapsible collapsible-accordion">
-                  <li>
-                    <a class="collapsible-header">Dropdown <i class="material-icons">arrow_drop_down</i></a>
-                    <div class="collapsible-body">
-                      <ul>
-                        <li><a href="">Link 1</a></li>
-                        <li><a href="">Link 2</a></li>
-                        <li><a href="">Link 3</a></li>
-
+            <a class='dropdown-trigger coverTrigger' href='#' data-target='dropdown1'><i class="material-icons right">arrow_drop_down</i>Etapas</a>
+          <ul id='dropdown1' class='dropdown-content'>
+            <li><a href="#!">one</a></li>
+            <li><a href="#!">two</a></li>
+            <li class="divider" tabindex="-1"></li>
+            <li><a href="#!">three</a></li>
+            <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+            <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+  
                       </ul>
                     </div>
                   </li>
@@ -85,7 +85,16 @@
           var elems = document.querySelectorAll('.sidenav');
           var instances = M.Sidenav.init(elems);
         });
+      </script>
+      <script>
+          document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.dropdown-trigger');
+    var instances = M.Dropdown.init(elems, options);
+  });
 
+  // Or with jQuery
+
+  $('.dropdown-trigger').dropdown();
       </script>
     </body>
   </html>
